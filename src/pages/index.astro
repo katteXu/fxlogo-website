@@ -1,12 +1,11 @@
 ---
-import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-import Header from "../components/Header.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-
+import Greeting from "../components/Geeting";
 const pageTitle = "首页";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <h2>博客副标题</h2>
+  <Greeting client:load messages={["Hej", "Hello", "Howdy", "Hey there","Habari"]} />
 </BaseLayout>
